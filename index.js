@@ -1,8 +1,6 @@
 const fastify = require('fastify')({ logger: true })
 
-fastify.register(require('./plugin/route'), { prefix: '/v1' })
-
-fastify.register(require('./plugin/route1'), { prefix: '/v2' })
+fastify.register(require('./plugin/route'))
 
 const start = async () => {
   try {
